@@ -1,0 +1,8 @@
+# controller
+10.0.10.11 controller
+
+# network
+10.0.10.21 network
+
+# compute
+10.0.10.31 compute
