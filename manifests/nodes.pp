@@ -1,6 +1,7 @@
 node 'controller' {
   include assets
   include ntp
+  include openstack
 }
 
 node 'network' {

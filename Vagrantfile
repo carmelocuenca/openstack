@@ -8,7 +8,7 @@ nodes = {
 
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
-  # config.vm.box_url = https://atlas.hashicorp.com/ubuntu/trusty64
+  # config.vm.box_url = https://cloud-images.ubuntu.com/vagrant/trusty/trusty-server-cloudimg-amd64-juju-vagrant-disk1.box
 
   nodes.each do |prefix, (count, ip_start)|
     count.times do |i|

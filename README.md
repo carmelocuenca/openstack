@@ -10,8 +10,10 @@ VitualBox y Vagrant y autorizaciones necesarios para lanzar máquinas virtuales
     cd openstack
     vagrant up
 
-La infraestructura virtual desplegada consta de tres máquinas: "controller", "network" y "compute".
-Cada una con ip's 10.0.10.11, 10.0.10.12 y 10.0.10.13 respectivamente.
+La infraestructura virtual desplegada consta de tres máquinas:
+- "controller" en 10.0.10.11
+- "network" en 10.0.10.21
+- "compute" en 10.0.10.31
 
 También existen 3 redes privadas:
 
@@ -22,3 +24,4 @@ También existen 3 redes privadas:
 ## Provisionamiento
 
 - Paquete ntp para todos los nodos
+- Enabled the OpenStack repository
