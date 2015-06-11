@@ -3,6 +3,7 @@ node 'controller' {
   include ntp
   include openstack
   include mariadb
+  include rabbitmq
 }
 
 node 'network' {
