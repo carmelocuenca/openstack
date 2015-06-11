@@ -1,17 +1,16 @@
-node 'controller' {
+node 'base' {
   include assets
   include ntp
+}
+
+node 'controller' inherits 'base' {
   include openstack
   include mariadb
   include rabbitmq
 }
 
-node 'network' {
-  include assets
-  include ntp
+node 'network' inherits 'base' {
 }
 
-node 'compute' {
-  include assets
-  include ntp
+node 'compute' inherits 'base' {
 }
