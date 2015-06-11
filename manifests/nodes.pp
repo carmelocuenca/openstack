@@ -2,6 +2,7 @@ node 'controller' {
   include assets
   include ntp
   include openstack
+  include mariadb
 }
 
 node 'network' {
