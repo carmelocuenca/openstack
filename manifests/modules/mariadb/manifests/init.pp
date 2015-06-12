@@ -7,9 +7,13 @@ class mariadb {
 
   exec { 'debconf-set-selections':
     command =>
-      "/bin/echo mariadb-server-5.5	mysql-server/root_password password ${MARIADB_ROOT_PASS} \
+      "/bin/echo mysql-server-5.5 mysql-server/root_password password ${MARIADB_ROOT_PASS} \
       | debconf-set-selections \
-      && /bin/echo mariadb-server-5.5 mysql-server/root_password_again password ${MARIADB_ROOT_PASS} \
+      && /bin/echo mysql-server-5.5 mysql-server/root_password_again password ${MARIADB_ROOT_PASS} \
+      | debconf-set-selections \
+      && /bin/echo mysql-server-5.5 mysql-server/root_password seen true \
+      | debconf-set-selections \
+      && /bin/echo mysql-server-5.5 mysql-server/root_password_again seen true \
       | debconf-set-selections"
   }
 
